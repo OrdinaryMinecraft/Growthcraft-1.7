@@ -325,6 +325,7 @@ public class TileEntityFermentBarrel extends TileEntityCellarDevice implements I
 		super.writeToNBTForItem(nbt);
 		writeFermentTimeToNBT(nbt);
 		nbt.setBoolean("lid_on", lidOn);
+		nbt.removeTag("inventory");
 	}
 
 	@TileEventHandler(event=TileEventHandler.EventType.NBT_WRITE)
